@@ -1,0 +1,25 @@
+footer a:hover {
+  text-decoration: underline;
+}
+
+.bg{
+    background-color: pink;
+    /* background-color: #fe629e42; */
+    /* background-color: rgb(224, 137, 189); */
+}
+
+.foot-top{
+    /* height: 50px; */
+    height: fit-content;
+    /* width: 50px; */
+    border-radius: 100px;
+    background-color:#fe629e42;
+    /* background-color:rgb(178, 130, 159); */
+    color: white;
+    text-align: center;
+    /* font-size: xx-large; */
+    /* transform: translateY(-100px); */
+    margin: auto;
+    padding: 20px;   
+    
+}

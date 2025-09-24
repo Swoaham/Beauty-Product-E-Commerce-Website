@@ -1,0 +1,39 @@
+<app-z-sections></app-z-sections>
+<cards></cards>
+<br>
+<carousel></carousel>
+<br>
+<br>
+
+<div class="container" id="wehave">
+    <h1 class="heading"><strong>Custom </strong>Products</h1>
+    <button class="btn btn-warning" type="button" (click)="getProducts()" *ngIf="!showProducts">Get Products</button>
+ 
+     <div class='table-responsive'>
+            <table class='table'>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody *ngIf="showProducts">
+                    <tr *ngFor="let product of products;">
+                        <td>{{product.productID}}</td>
+                        <td>{{product.name}}</td>
+                        <td>{{product.price}}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <button class="btn btn-warning" type="button" (click)="HideProducts()" *ngIf="showProducts">Hide Products</button>
+        </div>
+ 
+</div>
+<br>
+<br>
+<grids (addProductToCart)="addToCart($event)"></grids>
+<br>
+<groupcompanies></groupcompanies>
+
+

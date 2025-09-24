@@ -1,0 +1,72 @@
+.card-head{
+    margin-top: 20px;
+    /* position: relative; */
+    display: flex;
+    flex: auto;
+    padding: 10px;
+    background-color: #ff91bb00;
+     color: azure;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+h2{
+ color: rgb(249, 104, 104);
+}
+.card-body{
+    background-color: #fad7e5;
+}
+
+.card{
+    margin: 20px;
+}
+
+.card:hover{
+
+    transform: scale(0.98);
+    transition-timing-function: ease-in-out;
+    text-decoration: none;
+    
+  
+    /* box-shadow: 0px 0px 15px 5px aqua; */
+    box-shadow: 0px 0px 15px 5px #d4225747;
+
+
+}
+
+/* Hide scrollbar but allow scrolling */
+.hide-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: auto;     /* Firefox */
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;             /* Chrome, Safari, Opera */
+}
+
+
+
+.scroll-wrapper {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.auto-scroll {
+  display: flex;
+  gap: 1rem;
+  animation: scroll-loop 10s linear infinite;
+    transition-timing-function: ease-in-out;
+}
+
+.auto-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+@keyframes scroll-loop {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-60%);
+  }
+}

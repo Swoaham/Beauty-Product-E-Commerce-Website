@@ -1,0 +1,17 @@
+<div class="parent" *ngIf="products && products.length">
+  <div class="card" *ngFor="let product of products">
+    <img [src]="product.image" class="card-img-top" [alt]="product.name" />
+    <div class="card-body">
+      <h6 class="card-title">{{ product.name }}</h6>
+      <p class="card-text">Price: ₹{{ product.price }}</p>
+      <button class="btn btn-primary" (click)="sendToCart(product.name)">Add to Cart</button>
+    </div>
+  </div>
+</div>
+
+<div 
+  class="custom-toast" 
+  *ngIf="showToast"
+  [@fadeInOut]>
+  🎉 Product Added to Cart!
+</div>

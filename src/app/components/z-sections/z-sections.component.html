@@ -1,0 +1,17 @@
+<div class="scene">
+  <div
+    class="z-container"
+    *ngFor="let section of sections; let i = index"
+    [ngClass]="{ active: currentSection === i }"
+    [ngClass]="getClass(i)" 
+  >
+    <div class="section-content">
+       <img [src]="section.img" alt="{{ section.title }}" class="card-img" />
+      <div class="content-bolck">
+      <h2>{{ section.title }}</h2>
+      <p>{{ section.description }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+

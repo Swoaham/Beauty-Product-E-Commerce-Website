@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Page Not Found</title>
+  <meta http-equiv="refresh" content="0;url=./index.html" />
+  <script>
+    // If the user enters a deep link like /aboutus, capture that path
+    // and store it, then redirect to index.html so Angular router can handle it
+    (function() {
+      const redirectUrl = window.location.pathname + window.location.search;
+      const base = document.querySelector('base')?.getAttribute('href') || '/';
+      // If the path isn't the root index, store it and redirect
+      if (redirectUrl && redirectUrl !== '/' && redirectUrl !== base) {
+        sessionStorage.setItem('redirect', redirectUrl);
+      }
+      // Force redirect to index.html (or base href)
+      window.location.replace(base + 'index.html');
+    })();
+  </script>
+</head>
+<body>
+  <p>Redirecting…</p>
+</body>
+</html>
